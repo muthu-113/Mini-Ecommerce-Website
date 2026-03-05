@@ -1,0 +1,69 @@
+.splash-bg {
+  background-color: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Arial Black', sans-serif;
+  overflow: hidden;
+}
+
+.welcome {
+  font-size: 14px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+
+.brand {
+  font-size: 60px;
+  margin: 10px 0;
+  letter-spacing: 5px;
+  transform: scale(0.5);
+  opacity: 0;
+  animation: zoomMass 0.8s forwards 0.5s; 
+}
+
+
+.jvl {
+  color: #FFD700;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+
+.line {
+  height: 2px;
+  background: white;
+  width: 0;
+  margin: 0 auto;
+  animation: growLine 1s forwards 1.2s;
+}
+
+
+.shopping {
+  font-size: 12px;
+  letter-spacing: 12px;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 1.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes zoomMass {
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes growLine {
+  to { width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .brand { font-size: 40px; }
+  .welcome { letter-spacing: 4px; }
+}
